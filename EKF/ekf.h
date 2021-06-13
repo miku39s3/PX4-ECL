@@ -242,6 +242,11 @@ public:
 	// get the gyroscope bias in rad/s
 	Vector3f getGyroBias() const override;
 
+	//begin cn
+	// get the magnet bias in ga/s
+    Vector3f getMagnetBias() const;
+    //end cn
+
 	// get GPS check status
 	void get_gps_check_status(uint16_t *val) override;
 

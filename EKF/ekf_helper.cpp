@@ -856,6 +856,13 @@ Vector3f Ekf::getGyroBias() const
 	return _state.delta_ang_bias / _dt_ekf_avg;
 }
 
+//begin cn
+Vector3f Ekf::getMagnetBias() const
+{
+    return _state.mag_B;
+}
+//end cn
+
 // get the position and height of the ekf origin in WGS-84 coordinates and time the origin was set
 // return true if the origin is valid
 bool Ekf::get_ekf_origin(uint64_t *origin_time, map_projection_reference_s *origin_pos, float *origin_alt)
